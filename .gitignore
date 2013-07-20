@@ -1,5 +1,6 @@
 .idea
 /webstat
-/assets
 
+/assets
+/protected/runtime
 /protected/config.ini

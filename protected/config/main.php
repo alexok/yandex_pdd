@@ -7,6 +7,10 @@ return array(
 	// preloading 'log' component
 	'preload'=>array('log'),
 
+	'aliases'=>array(
+		'bootstrap'=>'ext.bootstrap',
+	),
+
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
@@ -33,7 +37,8 @@ return array(
 		),
 
 		'urlManager'=>array(
-			'urlFormat'=>'path',
+			'urlFormat'=>CUrlManager::PATH_FORMAT,
+			'showScriptName'=>false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
@@ -69,6 +74,9 @@ return array(
 				),
 				*/
 			),
+		),
+		'bootstrap'=>array(
+			'class'=>'bootstrap.components.Bootstrap',
 		),
 	),
 
